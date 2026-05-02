@@ -1,0 +1,13 @@
+[build]
+publish = "."
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[functions]
+
+[[forms]]
+name = "contact"
+recipient = "festuspessima617@gmail.com"

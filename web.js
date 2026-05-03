@@ -1,4 +1,4 @@
-// Image upload preview (for admin use)
+
 const upload = document.getElementById("imageUpload");
 const preview = document.getElementById("preview");
 
@@ -11,7 +11,7 @@ preview.src = URL.createObjectURL(file);
 });
 }
 
-// Smooth scrolling for navigation
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function (e) {
 e.preventDefault();
@@ -25,7 +25,7 @@ block: 'start'
 });
 });
 
-// Scroll animations
+
 const observerOptions = {
 threshold: 0.1,
 rootMargin: '0px 0px -50px 0px'
@@ -40,7 +40,7 @@ entry.target.style.transform = 'translateY(0)';
 });
 }, observerOptions);
 
-// Animate cards on scroll
+
 document.querySelectorAll('.card').forEach(card => {
 card.style.opacity = '0';
 card.style.transform = 'translateY(30px)';
@@ -48,7 +48,7 @@ card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
 observer.observe(card);
 });
 
-// Animate sections on scroll
+
 document.querySelectorAll('.section').forEach(section => {
 section.style.opacity = '0';
 section.style.transform = 'translateY(30px)';
@@ -56,7 +56,7 @@ section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
 observer.observe(section);
 });
 
-// Navbar scroll effect
+
 window.addEventListener('scroll', () => {
 const navbar = document.querySelector('.navbar');
 if (window.scrollY > 50) {
@@ -68,7 +68,7 @@ navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
 }
 });
 
-// Gallery image modal (simple lightbox)
+
 document.querySelectorAll('.gallery img').forEach(img => {
 img.addEventListener('click', () => {
 const modal = document.createElement('div');
@@ -99,7 +99,7 @@ document.body.removeChild(modal);
 });
 });
 
-// Form validation enhancement
+
 document.querySelectorAll('form').forEach(form => {
 form.addEventListener('submit', (e) => {
 const requiredFields = form.querySelectorAll('[required]');
@@ -121,7 +121,7 @@ alert('Please fill in all required fields.');
 });
 });
 
-// Typing animation for hero text (optional enhancement)
+
 function typeWriter(element, text, speed = 50) {
 let i = 0;
 element.textContent = '';
@@ -135,14 +135,9 @@ setTimeout(type, speed);
 type();
 }
 
-// Apply typing effect to hero h1 if desired
-// const heroTitle = document.querySelector('.hero-text h1');
-// if (heroTitle) {
-//   const originalText = heroTitle.textContent;
-//   typeWriter(heroTitle, originalText, 100);
-// }
 
-// Stats counter animation
+
+
 function animateCounter(element, target, duration = 2000) {
 const start = 0;
 const increment = target / (duration / 16);
@@ -159,7 +154,7 @@ element.textContent = Math.floor(current);
 }, 16);
 }
 
-// Animate stats on page load
+
 document.querySelectorAll('.stat h3').forEach(stat => {
 const target = parseInt(stat.textContent.replace(/[^\d]/g, ''));
 if (target) {
@@ -167,7 +162,6 @@ animateCounter(stat, target);
 }
 });
 
-// Parallax effect for hero section (subtle)
 window.addEventListener('scroll', () => {
 const hero = document.querySelector('.hero');
 if (hero) {
